@@ -11,7 +11,7 @@ async function page({ params }) {
     slug
 }`;
 
-  const data = await client.fetch(query, { slug });
+  const data = await client.fetch(query, { slug,cache: 'no-store' });
   console.log(data);
   if(data && data.pageBuilder){
 
