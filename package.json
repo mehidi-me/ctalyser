@@ -4,13 +4,23 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "echo 'Building Sanity to public/studio' && cd studio && yarn && npx @sanity/cli build ../public/studio -y && echo 'Done'",
     "build": "next build",
     "start": "next start",
+    "sanity": "cd studio && sanity start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.62.3",
+    "next": "15.0.2",
+    "next-sanity": "^9.8.8",
+    "next-sanity-image": "^6.1.1",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
-    "next": "15.0.2"
+    "sanity": "^3.62.3",
+    "scroll-carousel": "^1.2.7",
+    "scrollreveal": "^4.0.9",
+    "styled-components": "^6.1.13"
   }
 }
